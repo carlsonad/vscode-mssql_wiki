@@ -1,3 +1,11 @@
 # MSSQL for Visual Studio Code
 
-Welcome to Microsoft SQL Server extension for Visual Studio Code wiki!
+Lorem ipsum dolor sit amet, ad sed lorem nobis affert, te pro dictas quodsi voluptaria. Natum posidonium adversarium pro ei. Duo et congue meliore, pri stet quaeque signiferumque at, ius mollis fastidii percipit eu. Ridens partiendo interpretaris est ei, id est meis voluptaria. No possit eirmod quo, duo salutatus vituperata ne. Omnes accommodare mei ex, per vero iisque delenit ne, cum posidonium suscipiantur an.
+
+
+## Contents
+* Getting started with mssql extension
+* Keyboard shortcuts
+* Customizable options
+* Release notes
+* How to contribute
