@@ -4,6 +4,7 @@ Lorem ipsum dolor sit amet, ad sed lorem nobis affert, te pro dictas quodsi volu
 
 ## Table of Contents
 * [Getting started tutorial](GettingStarted.md)
+* [Manage connection profiles](ManageConnectionProfiles.md)
 * [Customizing keyboard shortcuts](CustomizingKeyboardShortcuts.md)
 * [Customizing extension options](CustomizingOptions.md)
 * [Contributing](Contributing.md)
