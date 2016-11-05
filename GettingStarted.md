@@ -15,7 +15,7 @@ At the end, you will have a complete SQL Server development environment on your 
 * Then install the mssql extension by pressing ```cmd+shift+p``` or ```F1``` to enter the command palette in Visual Studio Code, select ```Install Extenion``` and choose ```mssql```.
     * For macOS, you will need to install OpenSSL which is a pre-requiste for dotnet core that mssql extention uses. Follow the 'install pre-requisite' steps in [DotNet Core instruction page](https://www.microsoft.com/net/core#macos).
     * Or, simply run the following commands in your macOS Terminal.
-        ```
+        ```javascript
         brew update
         brew install openssl
         ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
