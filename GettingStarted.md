@@ -12,8 +12,8 @@ At the end, you will have a complete SQL Server development environment on your 
 
 ### Step 1. Download and install mssql extension from Visual Studio Code marketplace.
 * First, install [Visual Studio Code](https://code.visualstudio.com/#alt-downloads) and start it.
-* Then install the mssql extension by pressing ```cmd+shift+p``` or ```F1``` to enter the command palette in Visual Studio Code, select ```Install Extenion``` and choose ```mssql```.
-    * For macOS, you will need to install OpenSSL which is a pre-requiste for dotnet core that mssql extention uses. Follow the 'install pre-requisite' steps in [DotNet Core instruction page](https://www.microsoft.com/net/core#macos).
+* Then install the mssql extension by pressing ```cmd+shift+p``` or ```F1``` to open the command palette in Visual Studio Code, select ```Install Extenion``` and choose ```mssql```.
+    * For macOS, you will need to install OpenSSL which is a pre-requiste for DotNet Core that mssql extention uses. Follow the 'install pre-requisite' steps in [DotNet Core instruction page](https://www.microsoft.com/net/core#macos).
     * Or, simply run the following commands in your macOS Terminal.
         ```bash
         brew update
@@ -31,29 +31,28 @@ At the end, you will have a complete SQL Server development environment on your 
 ### Step 3. Create a new connection profile
 To make a connection to SQL Server, Azure SQL Databases or Data Warehouse, you need a connection profile which defines connection properties such as the server name, database name and user name. The mssql extension has a built-in wizard in the command palette that will help to create a new connection profile. 
 
-* Press ```F1```, and select ```MS SQL: Manage Connection Profile```. You can simply type ```sqlman``` and press ```enter```. You will see four connection management sub tasks. Select ```Create```.
-
-    [screenshot of command menu]
-
+* Press ```F1```, and select ```MS SQL: Manage Connection Profile```. You can simply type ```sqlman``` and press ```enter```. Select ```Create```.
 * ```Create``` task will walk you through a few questions.
-    * **Server Name**: type in your SQL Server instance name or type ```localhost``` if it is running on your machine. To connect Azure SQL Database or Data Warehouse, get the server name from the [Azure portal](https://portal.azure.com). Typically, it is ```<your-server-name>.database.windows.net```.
+    * **Server Name**: type in your SQL Server instance name or type ```localhost``` if it is running on your local machine. To connect Azure SQL Database or Data Warehouse, get the server name from the [Azure portal](https://portal.azure.com). Typically, it is ```<your-server-name>.database.windows.net``` format.
     * **Database Name**: Type in the name of database your want to connect. If you don't specify and press ```enter```, mssql will use the default value that is defined in the server such as ```master``` or ```tempdb``` for SQL Server. 
-    * **Authentication Type**: If you run Visual Studio Code on Windows, the mssql extension will ask this question. Select ```SQL Login``` for this tutorial. On Linux and macOS, ```SQL Login``` is only choice hence the mssql extension will skip asking this question.
+    * **Authentication Type**: If you run Visual Studio Code on Windows, the mssql extension will ask this question. Select ```SQL Login``` for this tutorial. On Linux and macOS, ```SQL Login``` is the only choice, hence the mssql extension will skip asking this question.
     * **User name**: Type a valid user name for the SQL Server instance you will connect to.
     * **Password**: Type a valid passowrd for the user.
-    * **Save Password**: Select ```Yes```. The mssql extension securely stores the password in a secure store, for example KeyChain on macOS and get the password from KeyChain for subsequent connections.
-    * **Profile Name**: Type ```mssqlTutorial``` or a name for the profile you like. Providing a name to a connection profile will help you search it later when you have multiple profiles.
+    * **Save Password**: Select ```Yes```. The mssql extension securely stores the password in a secure store, for example KeyChain on macOS and get the password from KeyChain for the subsequent connections.
+    * **Profile Name**: Type ```mssqlTutorial``` or a name that you like. Providing a name to a connection profile will help you search it later when you have multiple connection profiles.
     * Check if the connection profile is successfully created.
 
-    If you want to use editor to manually create a connection profile or edit existing connection profiles, see [manage connection profiles wiki page](ManageConnectionProfiles.md) for the detail on how-to. Yes, we are developers and it is totally valid way! And it can be handy if you want to copy an existing connection profile, paste then edit it to create multiple connection profiles. Or for any other reason you have.
+    If you want to use editor to manually create a connection profile or edit existing connection profiles, see [manage connection profiles wiki page](ManageConnectionProfiles.md). Knowing this way can be handy if you want to copy an existing connection profile, paste then edit it to create multiple connection profiles or to define advanced connection properties.
 
 ## Step 4. Connect!
-* Press ```F1``` then type ```sqlcon``` or use ```cmd+shift+c``` shortcut to run ```MS SQL: Connect``` command. Then select the connection profile ```mssqlTutorial``` and press ```enter```. Check if the connection was successful. You can view the connection status on the status bar.
+* Press ```F1``` then type ```sqlcon``` or use ```cmd+shift+c``` shortcut to run ```MS SQL: Connect``` command. 
+* Then select the connection profile ```mssqlTutorial``` and press ```enter```. 
+* Check if the connection was successful. You can view the connection status on the status bar.
 
     [image connection status] 
 
 ## Step 5. Write T-SQL script
-* On the editor, type ```sql```. It will show the list of T-SQL snippets. Keep typing in ```sqlcreate``` and select ```sqlCreateDatabase```.
+* In the editor, type ```sql```. It will show the list of T-SQL snippets. Keep typing in ```sqlcreate``` and select ```sqlCreateDatabase```.
     [image for snippet]
 * Type a database name in the snippet generated script in the editor, let's use ```ClinicDB``` for this tutorial. It will look like:
     ```sql
@@ -74,7 +73,7 @@ To make a connection to SQL Server, Azure SQL Databases or Data Warehouse, you n
     GO
     ```
 
-* Type the following T-SQL query. As you type, IntelliSense will help you complete the coding with the keyword and schema object suggestions and auto-completion. The mssql extension also validates the query for an error.
+* Type the following T-SQL query. As you type, IntelliSense will help you coding with suggestions and auto-completion. The mssql extension also validates the query for an error.
     ```sql
     SELECT * FROM sys.databases WHERE name = N'Clinic';
     GO
@@ -95,8 +94,8 @@ To make a connection to SQL Server, Azure SQL Databases or Data Warehouse, you n
 * Press ```F1``` then type ```sqlex``` or use ```cmd+shift+e``` to run ```MS SQL: Execute Query``` command. If you want to change the shortcut to a simpler or somthinge familiar to you such as ```F5``` or ```cmd+enter```, you can customize it. See [customizing keyboard shortcuts wiki page](CustomizingKeyboardShortcuts.md).
 
 ### Step 7. View and Save the result
-* You will see ```CREATE DATABASE``` statement execution result in the message view and ```SELECT``` query result in a grid.
-* Try the different split view layouts, horizontal and vertial, by running Visual Studio Code menu ```View``` --> ```Toggle Editor Group Layout```. Use the layout you prefer.
+* You will see ```CREATE DATABASE``` statement execution result in the Messages and ```SELECT``` query result in the Results.
+* Try different split view layouts, horizontal and vertial. Running Visual Studio Code menu ```View``` --> ```Toggle Editor Group Layout``` to switch the layout.
 * Play with following actions on the result view:
     * Click ```Results``` bar to toggle collapse and expand.
     * Click ```Messages``` bar to toggle collapse and expand.
@@ -104,7 +103,7 @@ To make a connection to SQL Server, Azure SQL Databases or Data Warehouse, you n
     * See [customize result view shortcuts wiki page](CustomizingResultViewShortcuts.md) for more actions and customizable shortcuts.
 * Click the right mouse button on a grid to pop-up the result grid menu and run ```Select all```. 
 * Click the right mouse button on a grid then run ```Save as JSON``` or click its icon button on the right side of the grid.
-* Type a file name such as ```myfile.json``` when the mssql extension promots a question to specify the save file name. It will save the result as a .json file format and open the file in the editor.
+* Type a file name such as ```myfile.json```. It will save the result as a .json file format and open the file in the editor.
 
 [image for playing with result view]
 
@@ -112,10 +111,10 @@ To make a connection to SQL Server, Azure SQL Databases or Data Warehouse, you n
 * Open a new file by pressing ```cmd+n``` then change the language mode to ```SQL``` by pressing ```cmd+k,m``` and type ```SQL```.
 * Press ```F1``` and type ```sqlcon``` and select ```mssqlTutorial``` connection profile. Press ```enter``` to connect.
 * Press ```F1``` and type ```sqluse``` or use ```cmd+shift+u``` to run ```MS SQL: Use Database``` command. Then select ```Clinic``` from the database list to switch the connection to ```Clinic``` database from master.
-* Press ```F1``` and type ```sqlcon``` and press ```enter```. You will see a new connection entry is added for the ```Clinic``` database. The mssql extension keeps the history of recent connections automatically. Next time, you can simply browse and select the newly added recent connection to connect to the ```Clinic``` database.
+* Press ```F1``` and type ```sqlcon``` and press ```enter```. You will see a new connection entry is added for the ```Clinic``` database. The mssql extension keeps the history of recent connections automatically. Next time, you can simply browse and select the newly added recent connection to connect to the ```Clinic``` database. 
 
 ### End of tutorial and play more by yourself
-Great! You have finished learning core features of mssql extension. Play more with the sample T-SQL script below. Also explore other mssql features. Press ```F1``` and type ```mssql``` or ```sql``` to see the all supported commands from the mssql extension.
+Great! You have finished learning core features of the mssql extension. Play more with the sample T-SQL script below. Also explore other mssql features. Press ```F1``` and type ```mssql``` or ```sql``` to see the all supported commands from the mssql extension.
 ```sql
     -- Create Patients table
     CREATE TABLE [dbo].[Patients]
