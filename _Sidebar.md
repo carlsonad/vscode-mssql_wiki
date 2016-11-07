@@ -5,3 +5,4 @@
 * [Customizing extension options](CustomizingOptions.md)
 * [Customizing snippets](CustomizingSnippets.md)
 * [Contributing](Contributing.md)
+* [Usage Reporting](UsageReporting.md)
