@@ -16,3 +16,4 @@ Welcome to **mssql** <sup>preview</sup> for Visual Studio Code! An extension for
 * [Customizing extension options](CustomizingOptions.md)
 * [Customizing snippets](CustomizingSnippets.md)
 * [Contributing](Contributing.md)
+* [Usage Reporting](UsageReporting.md)
