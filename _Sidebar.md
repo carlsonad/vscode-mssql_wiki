@@ -6,3 +6,4 @@
 * [Customizing snippets](CustomizingSnippets.md)
 * [Contributing](Contributing.md)
 * [Usage Reporting](UsageReporting.md)
+* [OpenSSL Configuration (Mac Only)](https://github.com/Microsoft/vscode-mssql/wiki/OpenSSL-Configuration-(Mac-Only))
