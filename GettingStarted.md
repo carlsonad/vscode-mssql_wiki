@@ -30,7 +30,6 @@ At the end, you will have a complete SQL Server development environment on your 
 
 ### Step 3. Create a new connection profile
 To make a connection to SQL Server, Azure SQL Databases or Data Warehouse, you need a connection profile. The mssql extension has a built-in wizard in the command palette that will help to create a new connection profile. 
-
 * Press ```F1```, and select ```MS SQL: Manage Connection Profile```. You can simply type ```sqlman``` and press ```enter```. Select ```Create```.
 * ```Create``` task will walk you through a few questions.
     * **Server Name**: type in your SQL Server instance name or type ```localhost``` if it is running on your local machine. To connect Azure SQL Database or Data Warehouse, get the server name from the [Azure portal](https://portal.azure.com). Typically, it is ```<your-server-name>.database.windows.net``` format.
@@ -41,7 +40,6 @@ To make a connection to SQL Server, Azure SQL Databases or Data Warehouse, you n
     * **Save Password**: Select ```Yes```. The mssql extension securely stores the password in a secure store, for example KeyChain on macOS and get the password from KeyChain for the subsequent connections.
     * **Profile Name**: Type ```mssqlTutorial``` or a name that you like. Providing a name to a connection profile will help you search it later when you have multiple connection profiles.
     * Check if the connection profile is successfully created.
-
 > To manually create or edit a connection profile, see [manage connection profiles wiki page](ManageConnectionProfiles.md). You can quickly create multiple connection properties by copy, paste and edit existing connection profile or add advanced connection properties to a connection profile using the connection properties suggestion list.
 
 ### Step 4. Connect
