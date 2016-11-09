@@ -1,5 +1,5 @@
 ## Table of Contents
-* [Getting started tutorial](GettingStarted.md)
+* [Getting started tutorial](GettingStarted)
 * [Manage connection profiles](ManageConnectionProfiles.md)
 * [Customizing keyboard shortcuts](CustomizingKeyboardShortcuts.md)
 * [Customizing extension options](CustomizingOptions.md)
