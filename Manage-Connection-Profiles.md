@@ -6,7 +6,7 @@
 |-----|-----|
 | [**Create**](#create-a-new-connection) | Creates a new Connection using the Command Palette workflow |
 | [**Clear recent connections list**](#clear-recent-connections-list) | Clears the list of recent connections. By default the 5 most recent connections to a database are shown in the connection list.  |
-| [**Edit**](#edit)  | Opens the list of SQL connections stored in user settings |
+| [**Edit**](#edit-connections-in-the-user-settings-file)  | Opens the list of SQL connections stored in user settings |
 | [**Remove**](#remove-a-connection-profile)  | Removes a connection profile from the user settings. Also removes any associated password saved in the password manager.  |
 
 ### Connection-related user preferences
