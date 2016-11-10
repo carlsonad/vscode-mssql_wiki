@@ -1,5 +1,5 @@
 # Usage Reporting
-Lorem ipsum dolor sit amet, ad sed lorem nobis affert, te pro dictas quodsi voluptaria. Natum posidonium adversarium pro ei. Duo et congue meliore, pri stet quaeque signiferumque at, ius mollis fastidii percipit eu. Ridens partiendo interpretaris est ei, id est meis voluptaria. No possit eirmod quo, duo salutatus vituperata ne. Omnes accommodare mei ex, per vero iisque delenit ne, cum posidonium suscipiantur an.
+Microsoft collects data to operate effectively and provide you with the best experiences with our products. This includes mssql for Visual Studio Code.
 
 ## What is collected and reported?
 We collect data about how mssql for Visual Studio Code is used as well as how it interacts with other Microsoft products and services. Broadly speaking, we collect the following types of usage data:
@@ -7,7 +7,12 @@ We collect data about how mssql for Visual Studio Code is used as well as how it
 * **Device data**. We collect data about your device. This includes data about operating systems and other software installed on your device, including version information.
 * **Error reports and performance data**. We collect data about the performance of mssql for Visual Studio Code and any problems you experience with it. This data helps us improve our products and services, to diagnose problems you see, and provide solutions.
 
-For specifics on what data is collected, you can view the source code of mssql for Visual Studio Code for the most up-to-date and accurate information. Search for references to `Telemetry.sendTelemetryEvent` within the source code to learn more. Each call to this method represents a unique event that we track, and parameters provide information on the data points that are collected as part of the event.
+For specifics on what data is collected, you can view the [source code of mssql for Visual Studio Code](https://github.com/microsoft/vscode-mssql) for the most up-to-date and accurate information. Search for references to `Telemetry.sendTelemetryEvent` within the source code to learn more. Each call to this method represents a unique event that we track, and parameters provide information on the data points that are collected as part of the event.
 
-## How to turn off sending the usage reports to mssql for Visual Studio Code team
-[See Visual Studio Code FAQ: How to disable telemetry reporting](https://code.visualstudio.com/Docs/supporting/faq#_how-to-disable-telemetry-reporting)
+Additionally, we rely upon the following Node.js modules from Microsoft for providing data collection services. Please consult the source code of these modules for more information on common properties we collect with every event:
+* [vscode-extension-telemetry](https://github.com/Microsoft/vscode-extension-telemetry) 
+* [ApplicationInsights] (https://github.com/Microsoft/ApplicationInsights-node.js)
+
+## How to turn off sending usage reports to mssql for Visual Studio Code team
+By default, we collect usage data from mssql for Visual Studio Code. If you would like to disable the collection of usage data, please see the following:
+[Visual Studio Code FAQ: How to disable telemetry reporting](https://code.visualstudio.com/Docs/supporting/faq#_how-to-disable-telemetry-reporting). We respect the preference you provide Visual Studio Code in the user settings.
