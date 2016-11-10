@@ -49,6 +49,7 @@ be cleared from the list
 1. Type **F1**, then select the **MS SQL: Manage Connection Profiles** command and choose **Edit**. This opens the user settings in VSCode.
 2. Go to the **"mssql.connections"** section in settings.json. If you've never created a connection you'll need to add a line `"mssql:connections": []` to the settings file.
 3. Add a new connection by typing `{ }`, then entering connection properties as shown in the example below. 
+
     ```javascript
     "mssql.connections": [
         {
@@ -61,6 +62,7 @@ be cleared from the list
         }
     ]
     ```
+
    > [!TIP] 
    > For **SqlLogin** authentication a password is required. We recommend leaving the `"password": ""` property empty and setting `"savePassword": true`. When you first connection, you will be prompted for your password which will then be
    saved separately. See the [**Password management**](#password-management) section below for details on how your passwords are stored.
