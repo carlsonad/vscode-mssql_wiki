@@ -1,130 +1,240 @@
 # Getting Started
-Welcome! The mssql extension turns Visual Studio Code into a powerful development environment and code editor for Microsoft SQL Server, Azure SQL Databases and Data Warehouse evrywhere on Windows, Linux and macOS of your choice.
 
-In this step-by-step tutorial, we will walk you through how to:
-* Connect to Microsoft SQL Server, Azure SQL Databases and Data Warehouses.
-* Easily write T-SQL script with IntelliSense, T-SQL snippets, syntax colorization, real-time error validation and more!
+Welcome! The **mssql** extension turns Visual Studio Code into a powerful development environment and code editor for Microsoft SQL Server, Azure SQL Databases and Data Warehouses evrywhere on Linux, macOS and Windows of your choice.
+
+In this tutorial, we will walk you through how to:
+
+* Install Visual Studio Code and the **mssql** extension.
+
+* Connect to SQL Server.
+
+* Easily write T-SQL script with IntelliSense, TSQL snippets, syntax colorization and real-time error validations.
+
 * Execute the script against the connected database.
+
 * View the result in a slick grid.
+
 * Save the result to a json or csv file format.
 
-At the end, you will have a complete SQL Server development environment on your Windows, Linux or macOS. With that, you will be fully ready to venture into the exciting world of database development for your application.
+## Install Visual Studio Code
+1. If you have not already installed Visual Studio Code, [Download and install VS Code](https://code.visualstudio.com/Download) on your Linux, macOS or Windows machine.
 
-### Step 1. Download and install mssql extension from Visual Studio Code marketplace.
-* First, install [Visual Studio Code](https://code.visualstudio.com/#alt-downloads) and start it.
-* Then install the mssql extension by pressing ```cmd+shift+p``` or ```F1``` to open the command palette in Visual Studio Code, select ```Install Extenion``` and choose ```mssql```.
-    * For macOS, you will need to install OpenSSL which is a pre-requiste for DotNet Core that mssql extention uses. Follow the 'install pre-requisite' steps in [DotNet Core instruction page](https://www.microsoft.com/net/core#macos).
-    * Or, simply run the following commands in your macOS Terminal.
-        ```bash
-        brew update
-        brew install openssl
-        ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-        ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-        ```
-* If you don't have SQL Server, Azure SQL Database or Data Warehouse to connect to yet, get [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads), [Azure SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started) or [Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-get-started-provision) then continue to Step 2. Don't forget [SQL Server 2016 Developer Edition](https://www.microsoft.com) or [SQL on Linux](https://www.microsoft.com) and its [Docker container for macOS](https://www.microsoft.com) is free to use.
+2. Start Visual Studio Code.
 
-### Step 2. Open a new or existing *.sql file
-* Press ```cmd+n```. Visual Studio Code opens a new 'Plain Text' file by default. Press ```cmd+k,m``` and change the language mode to ```SQL```. 
-* Or simply open a file with a .sql file extension. 
-> The mssql extension looks for 'SQL' file type in the editor and activates commands and T-SQL IntelliSense on the .sql file. 
+## Install the mssql extension
+The following steps explain how to install the mssql extension. 
 
-### Step 3. Create a new connection profile
-To make a connection to SQL Server, Azure SQL Databases or Data Warehouse, you need a connection profile. The mssql extension has a built-in wizard in the command palette that will help to create a new connection profile. 
-* Press ```F1```, and select ```MS SQL: Manage Connection Profile```. You can simply type ```sqlman``` and press ```enter```. Select ```Create```.
-* ```Create``` task will walk you through a few questions.
-    * **Server Name**: type in your SQL Server instance name or type ```localhost``` if it is running on your local machine. To connect Azure SQL Database or Data Warehouse, get the server name from the [Azure portal](https://portal.azure.com). Typically, it is ```<your-server-name>.database.windows.net``` format.
-    * **Database Name**: Type in the name of database your want to connect. If you don't specify and press ```enter```, mssql will use the default value that is defined in the server such as ```master``` or ```tempdb``` for SQL Server. 
-    * **Authentication Type**: If you run Visual Studio Code on Windows, the mssql extension will ask this question. Select ```SQL Login``` for this tutorial. On Linux and macOS, ```SQL Login``` is the only choice, hence the mssql extension will skip asking this question.
-    * **User name**: Type a valid user name for the SQL Server instance you will connect to.
-    * **Password**: Type a valid passowrd for the user.
-    * **Save Password**: Select ```Yes```. The mssql extension securely stores the password in a secure store, for example KeyChain on macOS and get the password from KeyChain for the subsequent connections.
-    * **Profile Name**: Type ```mssqlTutorial``` or a name that you like. Providing a name to a connection profile will help you search it later when you have multiple connection profiles.
-    * Check if the connection profile is successfully created.
-> To manually create or edit a connection profile, see [manage connection profiles wiki page](ManageConnectionProfiles.md). You can quickly create multiple connection properties by copy, paste and edit existing connection profile or add advanced connection properties to a connection profile using the connection properties suggestion list.
+1. Press **ctrl+shift+p** (or **f1**) to open the command palette in Visual Studio Code, select **Install Extenion** and type **mssql**.
+    > [!TIP] 
+    > For macOS, **cmd** key is equivalent to **ctrl** key on Linux and Windows.
 
-### Step 4. Connect
-* Press ```F1``` then type ```sqlcon``` or use ```cmd+shift+c``` shortcut to run ```MS SQL: Connect``` command. 
-* Select the connection profile ```mssqlTutorial``` and press ```enter```. 
-* Check if the connection was successful. You can view the connection status on the status bar.
+2. Click install **mssql**. 
+    
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-extension.png" alt="Install the extension" style="width: 300px;"/>
 
-    [image connection status] 
+    > [!NOTE]
+    > **vscode-mssql** is a prototype version and it will retire from Visual Studio Code Marketplace soon. If you have already installed the vscode-mssql extension, remove it.
 
-### Step 5. Write T-SQL script
-#### Create a database with snippet
-* In the editor, type ```sql```. It will show the list of T-SQL snippets. Keep typing in ```sqlcreate``` and select ```sqlCreateDatabase```.
-* Type a database name in the snippet generated script in the editor, let's use ```ClinicDB``` for this tutorial. It will look like:
+3. The **mssql** extension takes up to one minute to install. Wait for the prompt that tells you it installed successfully.
+
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-install-success-notification.png" alt="Insatllation success notification" style="width: 480px;"/>
+
+    > [!TIP]
+    > For macOS, you will need to install OpenSSL which is a pre-requiste for DotNet Core that mssql extention uses. Follow the 'install pre-requisite' steps in [DotNet Core instruction page](https://www.microsoft.com/net/core#macos).
+    > Or, simply run the following commands in your macOS Terminal.
+        > ```bash
+        > brew update
+        > brew install openssl
+        > ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
+        > ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
+        > ```
+
+4. If you don't have SQL Server, Azure SQL Database or Data Warehouse to connect to yet, get [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads), [Azure SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started) or [Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-get-started-provision) and continue this tutorial.
+
+## Open a new or existing *.sql file
+1. Press **ctrl+n**. Visual Studio Code opens a new 'Plain Text' file by default. Press **ctrl+k,m** and change the language mode to **SQL**. 
+
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-language-mode.png" alt="SQL language mode" style="width: 300px;" />
+
+2. Or open a file with a .sql file extension. 
+
+    > [!NOTE]
+    > The **mssql** extension enables mssql commands and TSQL IntelliSense in the editor for a file with .sql extension or when the language mode is **SQL**.
+
+## Connect to SQL Server
+
+The following steps show how to connect to SQL Server vNext on Linux with VS Code.
+
+1. In VS Code, press **ctrl+shift+p** (or **f1**) to open the Command Palette.
+
+2. Type 'sql' to display the mssql commands.
+
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-commands.png" alt="mssql commands" style="width: 480px;" />
+   
+
+3. Select the **MS SQL: Connect** command. You can simply type **sqlcon** and press **enter**.
+
+4. Select **Create Connection Profile**. This creates a connection profile for your SQL Server instance.
+
+5. Follow the prompts to specify a sequence of values for the new connection profile. After specifying each value, press **enter** to continue. 
+
+    The following table describes the Connection Profile properties.
+
+   | Setting | Description |
+   |-----|-----|
+   | **Server name** | The SQL Server instance name. For this tutorial, use **localhost** to connect to the local SQL Server instance on your machine. If connecting to a remote SQL Server, enter the name of the target SQL Server machine or its IP address. |
+   | **[Optional] Database name** | The database that you want to use. For purposes of this tutorial, don't specify a database and press **enter** to continue. |
+   | **User name** | Enter the name of a user with access to a database on the server. For this tutorial, use the default **SA** account created during the SQL Server setup. |
+   | **Password (SQL Login)** | Enter the password for the specified user. | 
+   | **Save Password?** | Type **Yes** to save the password. Otherwise, type **No** to be prompted for the password each time the Connection Profile is used. |
+   | **[Optional] Enter a name for this profile** | The Connection Profile name. For example, you could name the profile **localhost profile**. 
+
+    > [!Tip] 
+    > You can create and edit connection profiles in User Settings file (settings.json). Open the settings file with **Preference**-->**User Settings** menu in VS Code. For more detail, see [manage connection profiles](sql-server-linux-connect-and-query-vs-code-manage-connection-profiles.md).
+
+6. Press **esc** key to close the info message that informs you that the profile is created and connected
+
+    > [!TIP]
+    > If you get a connection failure, first attempt to diagnose the problem from the error message in the **Output** pannel in VS Code (**View** --> **Output** menu). Then review the [connection troubleshooting recommendations](sql-server-linux-connect-and-query.md#troubleshoot).
+
+7. Verify your connection in the status bar.
+
+   <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-connection-status.png" alt="Connection status" style="width: 300px;" />
+
+## Create a database
+
+1. In the editor, type **sql** to bring up a list of editable code snippets. 
+
+   <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-sql-snippets.png" alt="SQL snippets" style="width: 480px;" />
+
+2. Select **sqlCreateDatabase**.
+
+3. In the snippet, type **TutorialDB** for the database name.
+
     ```sql
-    -- Create a new database called 'ClinicDB'
-    -- Connect to the 'master' database to run this snippet
     USE master
     GO
-    -- Drop the database if it already exists
-    IF EXISTS (
+    IF NOT EXISTS (
         SELECT name
         FROM sys.databases
-        WHERE name = N'ClinicDB'
+        WHERE name = N'TutorialDB'
     )
-    DROP DATABASE [ClinicDB]
-    GO
-    -- Create the new database
-    CREATE DATABASE [ClinicDB]
+    CREATE DATABASE [TutorialDB]
     GO
     ```
-#### Create a new table and insert data
-* Copy and paste the script below to create Patients table and insert some data.
+4. Press **ctrl+shift+e** to execute the Transact-SQL commands. View the results in the query window.
+
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-create-database-messages.png" alt="create database messages" style="width: 480px;" />
+
+    > [!TIP]
+    > You can customize shortcut key bindings for the mssql extension commands. See [customize shortcuts](./sql-server-linux-connect-and-query-vs-code-wiki-customize-shortcuts)
+
+## Create a table
+
+1. Remove the contents of the editor window.
+
+2. Press **f1** to display the Command Palette.
+
+3. Type **sql** in the Command Palette to display the SQL commands or type **sqluse** for **MS SQL:Use Database** command.
+
+4. Click **MS SQL:Use Database**, and select the **TutorialDB** database. This changes the context to the new database created in the previous section.
+
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-use-database.png" alt="use database" style="width: 480px;" />
+
+3. In the editor, type **sql** to display the snippets, and then select **sqlCreateTable** and press **enter**.
+
+4. In the snippet, type **Employees** for the table name.
+
+5. Press **Tab**, and then type **dbo** for the schema name.
+
+    > [!NOTE]
+    > After adding the snippet, you must type the table and schema names without changing focus away from the VS Code editor.
+
+6. Change the column name for **Column1** to **Name** and **Column2** to **Location**.
+
     ```sql
-    -- Change database to ClinicDB 
-    USE [ClinicDB];
+    -- Create a new table called 'Employees' in schema 'dbo'
+    -- Drop the table if it already exists
+    IF OBJECT_ID('dbo.Employees', 'U') IS NOT NULL
+    DROP TABLE dbo.Employees
     GO
-    -- Create Patients table
-    CREATE TABLE [dbo].[Patients]
+    -- Create the table in the specified schema
+    CREATE TABLE dbo.Employees
     (
-        [PatientId] [int] NOT NULL,
-        [FirstName] [nvarchar](50) NOT NULL,
-        [LastName] [nvarchar](50) NOT NULL, 
-        [Email] [nvarchar](50) NOT NULL,
-        [City] [nvarchar](50) NULL,
-        [MobileNumber] [nvarchar](50) NOT NULL
-        PRIMARY KEY CLUSTERED ([PatientId] ASC) ON [PRIMARY]
+        Id          INT    IDENTITY(1,1)    NOT NULL    PRIMARY KEY, -- primary key column
+        Name        [NVARCHAR](50)          NOT NULL,
+        Location    [NVARCHAR](50)          NOT NULL
     );
     GO
-    -- Insert sample data into Patients table
-    INSERT INTO [dbo].[Patients]([PatientId],[FirstName],[LastName],[Email],[City],[MobileNumber])
-    VALUES
-        (1, 'Amitabh', 'Bachchan', 'angry_young_man@gmail.com', 'Mumbai', '2620616212'),
-        (2, 'Abhishek', 'Bachchan', 'abhishek@abhishekbachchan.org', 'Mumbai', '8890195228'),
-        (3, 'Aishwarya', 'Rai', 'ash@gmail.com', 'Mumbai', '9991206339'),
-        (4, 'Joe', 'Blogger', 'joe@blogger.org', 'Mumbai', '8988234567'),
-        (5, 'Sally', 'Parker', 'sallyp@gmail.org', 'Pune', '8008123456'),
-        (6, 'Kareena', 'Kapoor', 'bebo@kapoor.org', 'Mumbai', '8007891721')
-    GO
     ```
-#### Query with SELECT statement
-* Type the following T-SQL query. As you type, IntelliSense will help you coding with suggestions and auto-completion. The mssql extension also validates the query for an error.
+
+7. Press **ctrl+shift+e** to create the table.
+
+## Insert and query
+
+1. Add the following statements using TSQL IntelliSense to insert two rows and then select all the rows from the **Table1** table.
+
     ```sql
-    -- Get the count of total patients number
-    SELECT COUNT(*) PatientCount FROM Patients;
-
-    -- Dump All Patient records
-    SELECT [FirstName], [LastName], [Email], [MobileNumber] FROM Patients;
+    -- Insert rows into table 'Employees'
+    INSERT INTO Employees
+        ([Name],[Location])
+    VALUES
+        ( N'Jared', N'Australia'),
+        ( N'Nikita', N'India'),
+        ( N'Tom', N'Germany'),
+        ( N'Jake', N'United States')   
+    GO    
+    -- Query the total count of employees
+    SELECT COUNT(*) as EmployeeCount FROM dbo.Employees;
+    -- Query all employee information
+    SELECT e.Id, e.Name, e.Location 
+    FROM dbo.Employees as e
     GO
     ```
-### Step 6. Execute
-* Press ```F1``` then type ```sqlex``` or use ```cmd+shift+e``` to run ```MS SQL: Execute Query``` command. To customize the shortcut bindings, see [customizing keyboard shortcuts wiki page](CustomizingKeyboardShortcuts.md).
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-intellisense.png" alt="TSQL IntelliSense" style="width: 480px;" />
 
-### Step 7. View and Save the result
-* Check the execution messages and query results in Messages and Results panes.
-* Try horizontal and vertical split view layouts. Go to Visual Studio Code menu ```View``` --> ```Toggle Editor Group Layout``` to switch the layout.
-* Play with following actions on the result view:
-    * Click ```Results``` bar to toggle collapse and expand.
-    * Click ```Messages``` bar to toggle collapse and expand.
-    * Click ```Maximize / Restore``` icon button on a grid.
-    * See [customize result view shortcuts wiki page](CustomizingResultViewShortcuts.md) for more actions and customizable shortcuts.
-* Click the right mouse button on a grid to pop-up the result grid menu and run ```Select all```. 
-* Click the right mouse button on a grid then run ```Save as JSON``` or click its icon button on the right side of the grid.
-* Specify the file name such as ```myfile.json```. It will save the result as a .json file format and open the file in the editor.
+2. Press **ctrl+shift+e** to execute the commands. The two result sets display in the Results window. 
 
-[image for playing with result view]
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-result-grid.png" alt="Results" style="width: 300px;" />
 
-### End of tutorial and play more by yourself
-You have finished learning the core features of the mssql extension. [Add next steps]
+## View and save the result
+
+1. Select VS Code menu: **View** --> **Toggle Editor Group Layout** to switch to vertical or horizontal split layout.
+
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-toggle-split.png" alt="Vertical split" style="width: 480px;" />
+
+2. Click the **Results** and **Messages** pannel header to collapse and expand the pannel.
+
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-toggle-messages-pannel.png" alt="Toggle Messages" style="width: 480px;" />
+
+    > [!TIP]
+    > You can customize the default behavior of the mssql extension such as your preference on the initial state of collapse and expand the Messages pannel and more. See [customize the mssql extension options](./sql-server-linux-connect-and-query-vs-code-wiki-customize-options) for more details.
+
+2. Click the maximize grid icon on the second result grid to zoom in.
+
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-maximize-grid.png" alt="Maximize grid" style="width: 480px;" />
+
+    > [!NOTE]
+    > Maximize icon displays when your TSQL script has more than two result grids.
+
+3. Open the grid context menu with the right moouse button on a grid. 
+
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-grid-context-menu.png" alt="Context menu" style="width: 480px;" />
+
+4. Select **Save All**
+
+5. Open the grid context menu and select **Save as JSON** to save the result to a .json file.
+
+6. Specify a file name for the json file. For this tutorial, type **employees.json**.
+
+7. Check the json file is saved and opened in VS Code.
+
+    <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-save-as-json.png" alt="Save as Json" style="width: 480px;" />
+
+## Next steps
+
+In a real-world scenario, you might create a script that you need to save and run later (either for administration or as part of a larger development project). In this case, you can save the script with a **.sql** extension.
+
+If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx) and the [Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx).
+
+For more information on using VS Code, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs).
