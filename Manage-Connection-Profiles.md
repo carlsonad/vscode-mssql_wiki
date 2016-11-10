@@ -4,10 +4,10 @@
 
 | Action | Description |
 |-----|-----|
-| [**Create**](.#create-a-new-connection) | Creates a new Connection using the Command Palette workflow |
-| [**Clear recent connections list**](.#clear-recent-connections-list) | Clears the list of recent connections. By default the 5 most recent connections to a database are shown in the connection list.  |
-| [**Edit**](.#edit)  | Opens the list of SQL connections stored in user settings |
-| [**Remove**](.#remove-a-connection-profile)  | Removes a connection profile from the user settings. Also removes any associated password saved in the password manager.  |
+| [**Create**](#create-a-new-connection) | Creates a new Connection using the Command Palette workflow |
+| [**Clear recent connections list**](#clear-recent-connections-list) | Clears the list of recent connections. By default the 5 most recent connections to a database are shown in the connection list.  |
+| [**Edit**](#edit)  | Opens the list of SQL connections stored in user settings |
+| [**Remove**](#remove-a-connection-profile)  | Removes a connection profile from the user settings. Also removes any associated password saved in the password manager.  |
 
 ### Connection-related user preferences
 
@@ -35,17 +35,17 @@ The following table describes the Connection Profile properties.
 | **[Optional] Enter a name for this profile** | The Connection Profile name. For example, you could name the profile **localhost profile**. |
 
 > [!TIP] 
-> See the [**Password management**](#.password-management) section below for how passwords are stored when **Save Password** is chosen. 
+> See the [**Password management**](#password-management) section below for how passwords are stored when **Save Password** is chosen. 
 
 ### New connection from user settings
-See the [**Editing Properties**](.#editing-properties) section for details on how to add new connections and edit existing connections in the user settings. 
+See the [**Editing Connections**](#edit-connections-in-the-user-settings-file) section for details on how to add new connections and edit existing connections in the user settings. 
 
 ## Clear recent connections list
 Type **F1**, then select the **MS SQL: Manage Connection Profiles** command and choose **Clear Recent Connections List**. This will prompt you to clear the recent connections list.
 Any saved connection profiles will still be shown when connecting, but databases connected to via the `USE` TSQL command or using the **MS SQL: USE Database** command in VSCode will
 be cleared from the list
 
-## Edit
+## Edit connections in the user settings file
 1. Type **F1**, then select the **MS SQL: Manage Connection Profiles** command and choose **Edit**. This opens the user settings in VSCode.
 2. Go to the **"mssql.connections"** section in settings.json. If you've never created a connection you'll need to add a line `"mssql:connections": []` to the settings file.
 3. Add a new connection by typing `{ }`, then entering connection properties as shown in the example below. 
@@ -63,7 +63,7 @@ be cleared from the list
     ```
    > [!TIP] 
    > For **SqlLogin** authentication a password is required. We recommend leaving the `"password": ""` property empty and setting `"savePassword": true`. When you first connection, you will be prompted for your password which will then be
-   saved separately. See the [**Password management**](#.password-management) section below for details on how your passwords are stored.
+   saved separately. See the [**Password management**](#password-management) section below for details on how your passwords are stored.
 4. Edit an existing connection in the same way - for example change the `"authenticationType"` property to `"Integrated"` to connect using Integrated Authentication on Windows 
 
 ### Additional Connection Properties
