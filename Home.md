@@ -10,10 +10,10 @@ Welcome to **mssql** <sup>preview</sup> for Visual Studio Code! An extension for
 * Customizable extension options including command shortcuts and more.
 
 ## Table of Contents
-* [Getting started tutorial](GettingStarted.md)
-* [Manage connection profiles](ManageConnectionProfiles.md)
-* [Customizing keyboard shortcuts](CustomizingKeyboardShortcuts.md)
-* [Customizing extension options](CustomizingOptions.md)
-* [Customizing snippets](CustomizingSnippets.md)
-* [Contributing](Contributing.md)
-* [Usage Reporting](UsageReporting.md)
+* [Getting started tutorial](getting-started)
+* [Manage connection profiles](Manage-Connection-Profiles)
+* [Customizing keyboard shortcuts](customize-shortcuts)
+* [Customizing extension options](customize-options)
+* [Customizing snippets](customize-snippets)
+* [Contributing](Contributing)
+* [Usage Reporting](usage-reporting)
