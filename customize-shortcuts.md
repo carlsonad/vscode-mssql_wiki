@@ -38,13 +38,13 @@ default this command is bound to `ctrl+shift+u` on windows and linux and `cmd+sh
 
 5. Paste to keybindings.json file and change the value for the "key" property to "F5". 
 
-```javascript
-// Place your key bindings in this file to overwrite the defaults
-[
-   { "key": "F5",           "command": "extension.runQuery",
-                            "when": "editorTextFocus && editorLangId == 'sql'" }
-]
-```
+   ```javascript
+   // Place your key bindings in this file to overwrite the defaults
+   [
+      { "key": "F5",           "command": "extension.runQuery",
+                               "when": "editorTextFocus && editorLangId == 'sql'" }
+   ]
+   ```
 
 6. Save keybindings.json file and try the new shortcut.
 
