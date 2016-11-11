@@ -26,6 +26,28 @@ This command disconnects the current active document. By default this command is
 This command opens a prompt to change the active database for the current active document. By
 default this command is bound to `ctrl+shift+u` on windows and linux and `cmd+shift+u` on mac.
 
+### Sample scenario: customize MS SQL: Execute Query command shortcut
+
+1. Go to VS Code menu **Preferences**-->**Keyboard Shortcuts***. 
+
+2. It opens **Default Keyboard Shortcuts** file and **keybindings.json** file.
+
+3. Press **F3** and find a command to customize. Type **extension.runQuery** for this sample scenario.
+
+4. Copy extension.runQuery keybinding definition from Default Keyboard Shortcuts file.
+
+5. Paste to keybindings.json and change the value for "key" property to "F5". 
+
+```javascript
+// Place your key bindings in this file to overwrite the defaults
+[
+   { "key": "F5",           "command": "extension.runQuery",
+                            "when": "editorTextFocus && editorLangId == 'sql'" }
+]
+```
+
+> Note that you may override the shortcut for another command. For example, F5 is Launch command in the debugging session. Choose a keybinding with this consideration.
+
 ## Other Shortcuts
 
 The extension offers other shortcuts related to the results pane through the user settings of
