@@ -30,6 +30,8 @@ You can find out more about customizing shortcuts [here.](https://github.com/Mic
 >*event.prevGrid - ctrl+up*  
 >*event.nextGrid - ctrl+down*  
 >*event.copySelection - ctrl+c*   
+
+
 **Example**  
 ```json
     "mssql.shortcuts": {
@@ -45,10 +47,12 @@ You can find out more about customizing shortcuts [here.](https://github.com/Mic
     }
 ```
 ### Save results as CSV - include headers
-You can choose to include or exclude column headers in the CSV file with the `includeHeaders` setting.  When set to true, the headers are included in the saved CSV file.
+You can choose to include or exclude column headers in the CSV file with the `includeHeaders` setting.  When set to true, the headers are included in the saved CSV file.  
 **Setting** : *mssql.saveAsCSV*  
 **Default Value** :   
 >*includeHeaders - true*  
+
+
 **Example**  
 ```json
     "mssql.saveAsCsv": {
