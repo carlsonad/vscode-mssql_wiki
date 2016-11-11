@@ -32,7 +32,7 @@ default this command is bound to `ctrl+shift+u` on windows and linux and `cmd+sh
 
 2. It opens **Default Keyboard Shortcuts** file and **keybindings.json** file.
 
-3. Press **F3** and find a command to customize. For this sample scenario, type **extension.runQuery**.
+3. Press **F3** in Default Keyboard Shortcuts file and find a command to customize. For this sample scenario, type **extension.runQuery**.
 
 4. Copy extension.runQuery keybinding definition from Default Keyboard Shortcuts file.
 
