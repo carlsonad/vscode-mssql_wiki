@@ -1,4 +1,4 @@
-# Customizing Keyboard Shortcuts
+# Customize Keyboard Shortcuts
 
 The vscode mssql extension offers various keyboard shortcuts which can be customized through 
 vscode itself or through a user preference for the extension.
