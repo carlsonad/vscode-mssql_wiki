@@ -42,12 +42,13 @@ The following steps explain how to install the mssql extension.
     > [!TIP]
     > For macOS, you will need to install OpenSSL which is a pre-requiste for DotNet Core that mssql extention uses. Follow the 'install pre-requisite' steps in [DotNet Core instruction page](https://www.microsoft.com/net/core#macos).
     > Or, simply run the following commands in your macOS Terminal.
-        > ```bash
-        > brew update
-        > brew install openssl
-        > ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-        > ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-        > ```
+
+    ```bash
+    brew update
+    brew install openssl
+    ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
+    ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
+    ```
 
 4. If you don't have SQL Server, Azure SQL Database or Data Warehouse to connect to yet, get [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads), [Azure SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started) or [Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-get-started-provision) and continue this tutorial.
 
