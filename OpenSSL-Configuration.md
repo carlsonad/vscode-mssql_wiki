@@ -1,4 +1,10 @@
 # OpenSSL Configuration (Mac Only)
-OpenSSL version 1.0.1 or higher is required for mssql for Visual Studio Code to function properly on Mac. This is a known issue in the .NET Core project.
+For macOS, you will need to install OpenSSL which is a pre-requiste for DotNet Core that mssql extention uses. Follow the 'install pre-requisite' steps in [DotNet Core instruction page](https://www.microsoft.com/net/core#macos).
+Or, simply run the following commands in your macOS Terminal.
 
-Please see the [.NET Core known issues page](https://github.com/dotnet/core/blob/master/cli/known-issues.md#openssl-dependency-on-os-x) for instructions on how to install the correct version of OpenSSL, as well as descriptions of common problems with configuring OpenSSL and suggested solutions.
+```bash
+brew update
+brew install openssl
+ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
+ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
+```
