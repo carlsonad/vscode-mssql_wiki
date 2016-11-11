@@ -11,9 +11,11 @@ Welcome to **mssql** <sup>preview</sup> for Visual Studio Code! An extension for
 
 ## Table of Contents
 * [Getting started tutorial](getting-started)
-* [Manage connection profiles](Manage-Connection-Profiles)
-* [Customizing keyboard shortcuts](customize-shortcuts)
-* [Customizing extension options](customize-options)
-* [Customizing snippets](customize-snippets)
-* [Contributing](Contributing)
-* [Usage Reporting](usage-reporting)
+* [Manage connection profiles](manage-connection-profiles)
+* [Customize keyboard shortcuts](customize-shortcuts)
+* [Customize extension options](customize-options)
+* [Customize snippets](customize-snippets)
+* [Contributing](contributing)
+* [Usage reporting](usage-reporting)
+* [OpenSSL configuration (Mac Only)](https://github.com/Microsoft/vscode-mssql/wiki/OpenSSL-Configuration)
+* [Pre-Windows 10 pre-requisite](https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement)
