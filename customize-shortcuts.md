@@ -28,15 +28,15 @@ default this command is bound to `ctrl+shift+u` on windows and linux and `cmd+sh
 
 ### Sample scenario: customize MS SQL: Execute Query command shortcut
 
-1. Go to VS Code menu **Preferences**-->**Keyboard Shortcuts***. 
+1. Go to VS Code menu **Preferences**-->**Keyboard Shortcuts**. 
 
 2. It opens **Default Keyboard Shortcuts** file and **keybindings.json** file.
 
-3. Press **F3** and find a command to customize. Type **extension.runQuery** for this sample scenario.
+3. Press **F3** and find a command to customize. For this sample scenario, type **extension.runQuery**.
 
 4. Copy extension.runQuery keybinding definition from Default Keyboard Shortcuts file.
 
-5. Paste to keybindings.json and change the value for "key" property to "F5". 
+5. Paste to keybindings.json file and change the value for the "key" property to "F5". 
 
 ```javascript
 // Place your key bindings in this file to overwrite the defaults
@@ -45,6 +45,8 @@ default this command is bound to `ctrl+shift+u` on windows and linux and `cmd+sh
                             "when": "editorTextFocus && editorLangId == 'sql'" }
 ]
 ```
+
+6. Save keybindings.json file and try the new shortcut.
 
 > Note that you may override the shortcut for another command. For example, F5 is Launch command in the debugging session. Choose a keybinding with this consideration.
 
