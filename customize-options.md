@@ -1,4 +1,4 @@
-# Customizing Options
+# Customize Extension Options
 
 The mssql extension allows you to customize the extension settings in your VS Code workspace or user settings. All mssql options begin the prefix 'mssql' and are in json format. 
 
