@@ -24,7 +24,7 @@ In this tutorial, we will walk you through how to:
 ## Install the mssql extension
 The following steps explain how to install the mssql extension. 
 
-1. Press **ctrl+shift+p** (or **f1**) to open the command palette in Visual Studio Code, select **Install Extenion** and type **mssql**.
+1. Press **ctrl+shift+p** (or **F1**) to open the command palette in Visual Studio Code, select **Install Extension** and type **mssql**.
     > [!TIP] 
     > For macOS, **cmd** key is equivalent to **ctrl** key on Linux and Windows.
 
@@ -64,9 +64,9 @@ The following steps explain how to install the mssql extension.
 
 ## Connect to SQL Server
 
-The following steps show how to connect to SQL Server vNext on Linux with VS Code.
+The following steps show how to connect to SQL Server with VS Code.
 
-1. In VS Code, press **ctrl+shift+p** (or **f1**) to open the Command Palette.
+1. In VS Code, press **ctrl+shift+p** (or **F1**) to open the Command Palette.
 
 2. Type 'sql' to display the mssql commands.
 
@@ -134,7 +134,7 @@ The following steps show how to connect to SQL Server vNext on Linux with VS Cod
 
 1. Remove the contents of the editor window.
 
-2. Press **f1** to display the Command Palette.
+2. Press **F1** to display the Command Palette.
 
 3. Type **sql** in the Command Palette to display the SQL commands or type **sqluse** for **MS SQL:Use Database** command.
 
@@ -173,22 +173,22 @@ The following steps show how to connect to SQL Server vNext on Linux with VS Cod
 
 ## Insert and query
 
-1. Add the following statements using TSQL IntelliSense to insert two rows and then select all the rows from the **Table1** table.
+1. Add the following statements using TSQL IntelliSense to insert four rows and then select all the rows from the **Employees** table.
 
     ```sql
     -- Insert rows into table 'Employees'
     INSERT INTO Employees
-        ([Name],[Location])
+        ([EmployeesId], [Name],[Location])
     VALUES
-        ( N'Jared', N'Australia'),
-        ( N'Nikita', N'India'),
-        ( N'Tom', N'Germany'),
-        ( N'Jake', N'United States')   
+        ( 1, N'Jared', N'Australia'),
+        ( 2, N'Nikita', N'India'),
+        ( 3, N'Tom', N'Germany'),
+        ( 4, N'Jake', N'United States')   
     GO    
     -- Query the total count of employees
     SELECT COUNT(*) as EmployeeCount FROM dbo.Employees;
     -- Query all employee information
-    SELECT e.Id, e.Name, e.Location 
+    SELECT e.EmployeesId, e.Name, e.Location 
     FROM dbo.Employees as e
     GO
     ```
