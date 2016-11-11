@@ -1,6 +1,8 @@
 # Usage Reporting
 Microsoft collects data to operate effectively and provide you with the best experiences with our products. This includes mssql for Visual Studio Code.
 
+Your privacy is important to us. The [Privacy Statement](https://www.microsoft.com/en-us/privacystatement/EnterpriseDev/default.aspx) explains what data we collect from you and how we use it.
+
 ## What is collected and reported?
 We collect data about how mssql for Visual Studio Code is used as well as how it interacts with other Microsoft products and services. Broadly speaking, we collect the following types of usage data:
 * **Product use data**. We collect data about the features you use, how often you use them, and how you use them.
