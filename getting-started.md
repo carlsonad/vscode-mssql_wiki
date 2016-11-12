@@ -198,6 +198,9 @@ The following steps show how to connect to SQL Server with VS Code.
 
     <img src="./media/sql-server-linux-connect-and-query-vs-code/vscode-result-grid.png" alt="Results" style="width: 300px;" />
 
+    > [!TIP] 
+    > For Linux, xclip is required for selection copy from the results grid.
+
 ## View and save the result
 
 1. Select VS Code menu: **View** --> **Toggle Editor Group Layout** to switch to vertical or horizontal split layout.
