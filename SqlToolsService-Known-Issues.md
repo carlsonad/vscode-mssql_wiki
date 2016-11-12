@@ -1,6 +1,6 @@
-## Fixed Issues
+## If you've experienced a SQL Tools Service crash
 
-Report issues to [Github Issue Tracker] and provide your feedback.
+Report issues to [Github Issue Tracker] and let us know any details that will help reproduce the error.  Please leave a comment on existing issues so we can gauge how frequently those problems are occurring.
 
 ## Known Issues
 
@@ -13,7 +13,8 @@ Report issues to [Github Issue Tracker] and provide your feedback.
     * For Windows 8.1, Windows Server 2012 or lower, see [Windows 10 Universal C Runtime requirement]
 
 * Process is terminated due to StackOverflowException.
-There is a bug in the SQL Parser which can be triggered by some T-SQL syntax.  Please disable diagnostics if you hit this issue using the following user setting **"mssql.intelliSense.enableErrorChecking": false**. 
+
+    * There is a bug in the SQL Parser which can be triggered by certain T-SQL syntax.  Please disable diagnostics if you hit this issue using the following user setting **"mssql.intelliSense.enableErrorChecking": false**. 
 
 [GitHub Issue Tracker]:https://github.com/Microsoft/vscode-mssql/issues
 [OpenSSL requirement on macOS]:https://github.com/Microsoft/vscode-mssql/wiki/OpenSSL-Configuration
