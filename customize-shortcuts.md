@@ -1,9 +1,9 @@
 # Customize Keyboard Shortcuts
 
-The vscode mssql extension offers various keyboard shortcuts which can be customized through 
-vscode itself or through a user preference for the extension.
+The mssql for VS Code extension offers various keyboard shortcuts which can be customized through 
+VS Code itself or through a user preference for the extension.
 
-## Through Vscode
+## Through VS Code
 
 `extension.runQuery`
 
