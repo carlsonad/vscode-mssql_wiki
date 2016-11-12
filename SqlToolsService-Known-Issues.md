@@ -15,6 +15,7 @@ Report issues to [Github Issue Tracker] and let us know any details that will he
 * Process is terminated due to StackOverflowException.
 
     * There is a bug in the SQL Parser which can be triggered by certain T-SQL syntax.  Please disable diagnostics if you hit this issue using the following user setting **"mssql.intelliSense.enableErrorChecking": false**. 
+    * Tracking this with issue https://github.com/Microsoft/vscode-mssql/issues/340
 
 [GitHub Issue Tracker]:https://github.com/Microsoft/vscode-mssql/issues
 [OpenSSL requirement on macOS]:https://github.com/Microsoft/vscode-mssql/wiki/OpenSSL-Configuration
