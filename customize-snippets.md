@@ -1,3 +1,7 @@
-# Customizing Snippets
+# Customize Snippets
 
-Lorem ipsum dolor sit amet, ad sed lorem nobis affert, te pro dictas quodsi voluptaria. Natum posidonium adversarium pro ei. Duo et congue meliore, pri stet quaeque signiferumque at, ius mollis fastidii percipit eu. Ridens partiendo interpretaris est ei, id est meis voluptaria. No possit eirmod quo, duo salutatus vituperata ne. Omnes accommodare mei ex, per vero iisque delenit ne, cum posidonium suscipiantur an.
+The T-SQL snippets in the msssql extension is define in the mssql.json file in .vscode folder. 
+
+```bash
+code ~/.vscode/extensions/ms-mssql.mssql-0.1.5/snippets/mssql.json
+```
