@@ -3,30 +3,7 @@
 The mssql for VS Code extension offers various keyboard shortcuts which can be customized through 
 VS Code itself or through a user preference for the extension.
 
-## Through VS Code
-
-`extension.runQuery`
-
-This command runs a query for the current active document if that document has a language id
-of `sql`. By default this command is bound to `ctrl+shift+e` on windows and linux and 
-`cmd+shift+c` on mac.
-
-`extension.connect`
-
-This command connects the current active document to a sql server. By default this command is
-bound to `ctrl+shift+c` on windows and linux and `cmd+shift+c` on mac.
-
-`extension.disconnect`
-
-This command disconnects the current active document. By default this command is bound to
-`ctrl+shift+d` on windows and linux and `cmd+shift+d` on mac.
-
-`extension.chooseDatabase`
-
-This command opens a prompt to change the active database for the current active document. By
-default this command is bound to `ctrl+shift+u` on windows and linux and `cmd+shift+u` on mac.
-
-### Sample scenario: customize MS SQL: Execute Query command shortcut
+## Tutorial: customize MS SQL: Execute Query command shortcut
 
 1. Go to VS Code menu **Preferences**-->**Keyboard Shortcuts**. 
 
@@ -50,7 +27,31 @@ default this command is bound to `ctrl+shift+u` on windows and linux and `cmd+sh
 
 > Note that you may override the shortcut for another command. For example, F5 is Launch command in the debugging session. Choose a keybinding with this consideration.
 
-## Other Shortcuts
+
+## mssql extnsion commands
+
+`extension.runQuery`
+
+This command runs a query for the current active document if that document has a language id
+of `sql`. By default this command is bound to `ctrl+shift+e` on windows and linux and 
+`cmd+shift+c` on mac.
+
+`extension.connect`
+
+This command connects the current active document to a sql server. By default this command is
+bound to `ctrl+shift+c` on windows and linux and `cmd+shift+c` on mac.
+
+`extension.disconnect`
+
+This command disconnects the current active document. By default this command is bound to
+`ctrl+shift+d` on windows and linux and `cmd+shift+d` on mac.
+
+`extension.chooseDatabase`
+
+This command opens a prompt to change the active database for the current active document. By
+default this command is bound to `ctrl+shift+u` on windows and linux and `cmd+shift+u` on mac.
+
+## Result view actions
 
 The extension offers other shortcuts related to the results pane through the user settings of
 the extension. These can be customized through the extension setting `mssql.shortcuts`. When
