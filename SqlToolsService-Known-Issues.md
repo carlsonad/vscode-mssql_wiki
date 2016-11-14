@@ -20,7 +20,7 @@ Report issues to [Github Issue Tracker] and let us know any details that will he
 * Connection profiles are not loaded from user settings for Visual Studio Code - Insiders
 
     * Workaround: store connection profiles in the user settings file used by the Stable build of Visual Studio Code [(documented here)](https://code.visualstudio.com/docs/customization/userandworkspace#_settings-file-locations)
-    * Tracking this with issue https://github.com/Microsoft/vscode-mssql/issues/242
+    * Tracking this with issue https://github.com/Microsoft/vscode-mssql/issues/340
 
 [GitHub Issue Tracker]:https://github.com/Microsoft/vscode-mssql/issues
 [OpenSSL requirement on macOS]:https://github.com/Microsoft/vscode-mssql/wiki/OpenSSL-Configuration
