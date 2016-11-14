@@ -1,5 +1,5 @@
 ## Table of Contents
-* [Getting started tutorial](getting-started)
+* [Getting started tutorial](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-develop-use-vscode)
 * [Manage connection profiles](manage-connection-profiles)
 * [Customize keyboard shortcuts](customize-shortcuts)
 * [Customize extension options](customize-options)
