@@ -7,3 +7,4 @@
 * [Usage reporting](usage-reporting)
 * [OpenSSL configuration (Mac Only)](https://github.com/Microsoft/vscode-mssql/wiki/OpenSSL-Configuration)
 * [Pre-Windows 10 pre-requisite](https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement)
+* [Troubleshooting](https://github.com/Microsoft/vscode-mssql/wiki/SqlToolsService-Known-Issues)
