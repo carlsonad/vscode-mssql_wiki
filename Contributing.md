@@ -72,7 +72,7 @@ gulp package
 The VSIX package will be created in the root of the repository.
 
 ## Contribution License Agreement
-In order to contribute, you will need to sign a [Contributor License Agreement](https://cla.microsoft.com/).
+In order to contribute, you will need to sign a [Contributor License Agreement](https://cla.microsoft.com/).  All you need to do is to submit a pull request, then the PR will get appropriately labeled (e.g. `cla-required`, `cla-norequired`, `cla-signed`, `cla-already-signed`). If you already signed the agreement we will continue with reviewing the PR, otherwise system will tell you how you can sign the CLA. Once you sign the CLA all future PR's will be labeled as `cla-signed`.
 
 ## Code of Conduct
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
