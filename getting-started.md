@@ -162,7 +162,7 @@ The following steps show how to connect to SQL Server with VS Code.
     -- Create the table in the specified schema
     CREATE TABLE dbo.Employees
     (
-        Id          INT    IDENTITY(1,1)    NOT NULL    PRIMARY KEY, -- primary key column
+        EmployeesId INT    IDENTITY(1,1)    NOT NULL    PRIMARY KEY, -- primary key column
         Name        [NVARCHAR](50)          NOT NULL,
         Location    [NVARCHAR](50)          NOT NULL
     );
@@ -178,12 +178,12 @@ The following steps show how to connect to SQL Server with VS Code.
     ```sql
     -- Insert rows into table 'Employees'
     INSERT INTO Employees
-        ([EmployeesId], [Name],[Location])
+        ([Name],[Location])
     VALUES
-        ( 1, N'Jared', N'Australia'),
-        ( 2, N'Nikita', N'India'),
-        ( 3, N'Tom', N'Germany'),
-        ( 4, N'Jake', N'United States')   
+        (N'Jared', N'Australia'),
+        (N'Nikita', N'India'),
+        (N'Tom', N'Germany'),
+        (N'Jake', N'United States')   
     GO    
     -- Query the total count of employees
     SELECT COUNT(*) as EmployeeCount FROM dbo.Employees;
